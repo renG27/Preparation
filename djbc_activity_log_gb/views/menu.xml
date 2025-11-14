@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="djbc_activity_log_main_menu"
+        name="Activity Logs In Out"
+        parent="djbc_gb.djbc_root"
+        action="djbc_activity_log_action_gb"
+        sequence="30"/>
+
+    <record id="auditlog.menu_audit_logs" model="ir.ui.menu">
+        <field name="parent_id" ref="djbc_gb.djbc_root"/>
+        <field name="sequence">50</field> 
+    </record>
+
+    <record id="auditlog.menu_audit" model="ir.ui.menu">
+        <field name="active" eval="False"/>
+    </record>
+</odoo>

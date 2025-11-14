@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_djbc_activity_log_gb_user,djbc.activity.log.user,model_djbc_activity_log,djbc_gb.group_djbc_user,1,0,0,0
+access_djbc_activity_log_gb_manager,djbc.activity.log.manager,model_djbc_activity_log,djbc_gb.group_djbc_manager,1,0,0,0

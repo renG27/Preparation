@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="djbc_activity_log_tree_view" model="ir.ui.view">
+        <field name="name">djbc.activity.log.tree</field>
+        <field name="model">djbc.activity.log</field>
+        <field name="arch" type="xml">
+            <tree string="Activity Logs In Out" create="false" edit="false">
+                <field name="time"/>
+                <field name="resource_name"/>
+                <field name="status"/>
+                <field name="user_id"/>
+                <field name="no_in_out"/>
+                <field name="date_in_out"/>
+                <field name="dok_bc"/>
+                <field name="no_pendaftaran"/>
+                <field name="tgl_pendaftaran"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="djbc_activity_log_action_gb" model="ir.actions.act_window">
+        <field name="name">Activity Logs In Out</field>
+        <field name="res_model">djbc.activity.log</field>
+        <field name="view_mode">tree</field>
+    </record>
+</odoo>
