@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+       id="mutasi_xlsx"
+       model="djbc.mutasi_gb"
+       string="Mutasi DJBC"
+       report_type="xlsx"
+       name="djbc_mutasi_gb.mutasi_xlsx"
+       file="djbc mutasi"
+    />
+   
+   </odoo>

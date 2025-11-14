@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="mutasi_gb_tree" model="ir.ui.view">
+		<field name="name">djbc.mutasi.gb.tree</field>
+		<field name="model">djbc.mutasi_gb</field>
+		<field name="arch" type="xml">
+			<tree string="Laporan Mutasi *" create="0" edit="0">
+				<!-- <field name="sequence" string="No"/> -->
+				<field name="kode_barang"/>
+				<field name="nama_barang"/>
+				<field name="saldo_awal"/>
+				<field name="pemasukan"/>
+				<field name="pengeluaran"/>
+				<field name="penyesuaian"/>
+				<field name="stock_opname"/>
+				<field name="saldo_akhir"/>
+				<field name="selisih"/>
+				<field name="satuan"/>
+				<field name="keterangan"/>
+				<field name="warehouse"/>
+			</tree>
+		</field>
+	</record> 
+
+	<record id="mutasi_gb_form" model="ir.ui.view">
+		<field name="name">djbc.mutasi.gb.form</field>
+		<field name="model">djbc.mutasi_gb</field>
+		<field name="arch" type="xml">
+			<form string="Laporan Mutasi *" create="0" edit="0">
+				<sheet>
+                    <group>
+                        <group>
+                            <!-- <field name="sequence" string="No"/> -->
+                            <field name="kode_barang"/>
+                            <field name="nama_barang"/>
+                            <field name="saldo_awal"/>
+                            <field name="pemasukan"/>
+                            <field name="pengeluaran"/>
+                            <field name="penyesuaian"/>
+                            <field name="stock_opname"/>
+                            <field name="saldo_akhir"/>
+                            <field name="selisih"/>
+                            <field name="satuan"/>
+                            <field name="keterangan"/>
+                            <field name="warehouse"/>
+                        </group>
+                        <group>
+                            <group string="Summary Input Pemasukan">
+                                <label for="total_input_pemasukan"/>
+                                <div class="o_row">
+                                    <field name="total_input_pemasukan" nolabel="1"/>
+                                    <span class="oe_inline ml-2"><field name="satuan" nolabel="1"/></span>
+                                </div>
+                                <field name="sub_total_input_hasil_produksi"/>
+                                <field name="sub_total_input_pemasukan"/>
+                            </group>
+                            <div class="oe_clear" style="margin-top:20px;"/>
+                            <group string="Summary Output Pengeluaran">
+                                <label for="total_output_pengeluaran"/>
+                                <div class="o_row">
+                                    <field name="total_output_pengeluaran" nolabel="1"/>
+                                    <span class="oe_inline ml-2"><field name="satuan" nolabel="1"/></span>
+                                </div>
+                                <field name="sub_total_output_consume_produksi"/>
+                                <field name="sub_total_output_pengeluaran"/>
+                            </group>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Input Hasil Produksi">
+                            <field name="input_hasil_produksi_ids" readonly="1">
+                                <tree>
+                                    <field name="reference" string="Production"/>
+                                    <field name="date"/>
+                                    <field name="product_id"/>
+                                    <field name="id" string="Move Id"/>
+                                    <field name="qty_done" string="Produce"/>
+                                    <field name="product_uom_id"/>
+                                    <field name="location_dest_id" string="Location"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Input Pemasukan">
+                            <field name="input_pemasukan_ids" readonly="1">
+                                <tree>
+                                    <field name="picking_id" string="Pemasukan"/>
+                                    <field name="date"/>
+                                    <field name="jenis_dok_bc"/>
+                                    <field name="no_dok_bc"/>
+                                    <field name="tgl_dok_bc"/>
+                                    <field name="product_id"/>
+                                    <field name="qty_done" string="Quantity"/>
+                                    <field name="product_uom_id"/>
+                                    <field name="location_dest_id" string="Location"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Output Consume Produksi">
+                            <field name="output_consume_produksi_ids" readonly="1">
+                                <tree>
+                                    <field name="reference" string="Consume"/>
+                                    <field name="date"/>
+                                    <field name="product_id"/>
+                                    <field name="id" string="Move Id"/>
+                                    <field name="qty_done" string="Produce"/>
+                                    <field name="product_uom_id"/>
+                                    <field name="location_dest_id" string="Location"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Output Pengeluaran">
+                            <field name="output_pengeluaran_ids" readonly="1">
+                                <tree>
+                                    <field name="picking_id" string="Pengeluaran"/>
+                                    <field name="date"/>
+                                    <field name="jenis_dok_bc"/>
+                                    <field name="no_dok_bc"/>
+                                    <field name="tgl_dok_bc"/>
+                                    <field name="product_id"/>
+                                    <field name="qty_done" string="Quantity"/>
+                                    <field name="product_uom_id"/>
+                                    <field name="location_dest_id" string="Location"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Input Penyesuaian">
+                            <field name="input_penyesuaian_ids" readonly="1">
+                                <tree>
+                                    <field name="reference" string="Penyesuaian In"/>
+                                    <field name="date"/>
+                                    <field name="product_id"/>
+                                    <field name="qty_done" string="Quantity"/>
+                                    <field name="product_uom_id"/>
+                                    <field name="location_dest_id" string="Location"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Output Penyesuaian">
+                            <field name="output_penyesuaian_ids" readonly="1">
+                                <tree>
+                                    <field name="reference" string="Penyesuaian Out"/>
+                                    <field name="date"/>
+                                    <field name="product_id"/>
+                                    <field name="qty_done" string="Quantity"/>
+                                    <field name="product_uom_id"/>
+                                    <field name="location_id" string="Location"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="mutasi_gb_action" model="ir.actions.act_window">
+		<field name="name">Laporan Mutasi</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">djbc.mutasi_gb</field>
+		<field name="view_mode">tree,form</field>
+   		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">
+				It's Empty
+			</p>
+		</field>
+	</record>
+</odoo>

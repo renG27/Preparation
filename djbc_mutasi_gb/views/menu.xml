@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- <menuitem id="djbc_laporan_mutasi_v2" name="Mutasi *" parent="djbc.djbc_laporan"
+			  action="mutasiwizardv2_action" sequence="30" groups="djbc.group_djbc_user"/> -->
+    
+    <record id="mutasiwizardgb_action_penimbun_gb" model="ir.actions.act_window">
+        <field name="name">Mutasi: Barang Pendukung Kegiatan Penimbunan GB</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">djbc.mutasiwizardgb</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="djbc_mutasi_gb.mutasiwizardgb_form"/>
+        <field name="target">new</field>
+        <field name="context">{
+            'default_djbc_category_id': 1 
+        }</field>
+    </record>
+
+    <record id="mutasiwizardgb_action_sederhana_gb" model="ir.actions.act_window">
+        <field name="name">Mutasi: Barang Pendukung Kegiatan Penimbunan GB</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">djbc.mutasiwizardgb</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="djbc_mutasi_gb.mutasiwizardgb_form"/>
+        <field name="target">new</field>
+        <field name="context">{
+            'default_djbc_category_id': 2
+        }</field>
+    </record>
+
+    <record id="mutasiwizardgb_action_barang_import" model="ir.actions.act_window">
+        <field name="name">Mutasi: Barang Import</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">djbc.mutasiwizardgb</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="djbc_mutasi_gb.mutasiwizardgb_form"/>
+        <field name="target">new</field>
+        <field name="context">{
+            'default_djbc_category_id': 3
+        }</field>
+    </record>
+
+    <menuitem id="djbc_laporan_mutasi_penimbun_gb"
+              name="Mutasi Penimbun GB"
+              parent="djbc_gb.djbc_laporan"
+              action="mutasiwizardgb_action_penimbun_gb"
+              sequence="31"
+              groups="djbc_gb.group_djbc_user"/>
+
+    <menuitem id="djbc_laporan_mutasi_sederhana_gb"
+              name="Mutasi Sederhana GB"
+              parent="djbc_gb.djbc_laporan"
+              action="mutasiwizardgb_action_sederhana_gb"
+              sequence="32"
+              groups="djbc_gb.group_djbc_user"/>
+
+    <menuitem id="djbc_laporan_mutasi_barang_import"
+              name="Mutasi Barang Import"
+              parent="djbc_gb.djbc_laporan"
+              action="mutasiwizardgb_action_barang_import"
+              sequence="33"
+              groups="djbc_gb.group_djbc_user"/>
+
+
+</odoo>
