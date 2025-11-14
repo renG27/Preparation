@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_djbc_doctype_tree" model="ir.ui.view">
+        <field name="name">djbc.doctype.tree</field>
+        <field name="model">djbc.doctype</field>
+        <field name="arch" type="xml">
+            <tree>           
+            <field name="code"/>
+                <field name="is_import_doc"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_djbc_doctype_form" model="ir.ui.view">
+        <field name="name">djbc.doctype.form</field>
+        <field name="model">djbc.doctype</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="code"/>
+                        <field name="is_import_doc"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_djbc_doctype" model="ir.actions.act_window">
+        <field name="name">DJBC Doc Type</field>
+        <field name="res_model">djbc.doctype</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new DJBC Document Type.
+            </p>
+        </field>
+    </record>
+</odoo>

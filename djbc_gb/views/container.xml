@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_djbc_containers_tree" model="ir.ui.view">
+        <field name="name">djbc.containers.tree</field>
+        <field name="model">djbc.containers</field>
+        <field name="arch" type="xml">
+            <tree string="Containers">
+                <field name="name"/>
+                <field name="container_size"/>
+                <field name="container_type"/>
+                <field name="gate_pass"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_djbc_containers_form" model="ir.ui.view">
+        <field name="name">djbc.containers.form</field>
+        <field name="model">djbc.containers</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="gate_pass"/>
+                        </group>
+                        <group>
+                            <field name="container_size"/>
+                            <field name="container_type"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

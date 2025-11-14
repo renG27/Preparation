@@ -1,0 +1,11 @@
+/* Only affect djbc.docs form */
+.djbc-docs-form .o_field_widget.o_required_modifier input,
+.djbc-docs-form .o_field_widget.o_required_modifier textarea,
+.djbc-docs-form .o_field_widget.o_required_modifier .o_input,
+.djbc-docs-form .o_field_widget.o_required_modifier .o_input_dropdown {
+    background-color: #fff3b0 !important; /* light yellow */
+}
+
+.djbc-docs-form .o_field_widget.o_required_modifier .o_m2o_tag {
+    background-color: #fff3b0 !important;
+}

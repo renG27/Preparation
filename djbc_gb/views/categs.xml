@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_djbc_categs_tree" model="ir.ui.view">
+        <field name="name">djbc.categs.tree</field>
+        <field name="model">djbc.categs</field>
+        <field name="arch" type="xml">
+            <tree string="DJBC Categories">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_djbc_categs_form" model="ir.ui.view">
+        <field name="name">djbc.categs.form</field>
+        <field name="model">djbc.categs</field>
+        <field name="arch" type="xml">
+            <form string="DJBC Categories">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_products" type="object" class="oe_stat_button" icon="fa-list">
+                            <field name="product_count" widget="statinfo" string="Products"/>
+                        </button>
+                    </div>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_djbc_categs" model="ir.actions.act_window">
+        <field name="name">DJBC Categories</field>
+        <field name="res_model">djbc.categs</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new DJBC Category.
+            </p>
+        </field>
+    </record>
+</odoo>

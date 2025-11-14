@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_djbc_hscode_tree" model="ir.ui.view">
+        <field name="name">djbc.hscode.tree</field>
+        <field name="model">djbc.hscode</field>
+        <field name="arch" type="xml">
+            <tree string="DJBC HS Code">
+                <field name="code"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_djbc_hscode_form" model="ir.ui.view">
+        <field name="name">djbc.hscode.form</field>
+        <field name="model">djbc.hscode</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_djbc_hscode" model="ir.actions.act_window">
+        <field name="name">DJBC HS Code</field>
+        <field name="res_model">djbc.hscode</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new DJBC HS Code.
+            </p>
+        </field>
+    </record>
+</odoo>

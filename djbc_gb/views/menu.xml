@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="djbc_root" name="DJBC" web_icon="djbc,static/description/icon.png" sequence="1"/>
+
+        <menuitem id="djbc_form" name="Forms" parent="djbc_root" sequence="10"/>
+        <menuitem id="djbc_laporan" name="Laporan" parent="djbc_root" sequence="20"/>
+        <menuitem id="djbc_config" name="Config" parent="djbc_root" sequence="40"/>
+
+        <menuitem id="djbc_docs" name="DJBC Docs" parent="djbc_form" action="action_djbc_docs"/>
+        <menuitem id="djbc_hscode" name="HS Code" parent="djbc_config" action="action_djbc_hscode"/>
+        <menuitem id="djbc_categs" name="DJBC Categories" parent="djbc_config" action="action_djbc_categs"/>
+        <menuitem id="djbc_doctype" name="DJBC Doc Type" parent="djbc_config" action="action_djbc_doctype"/>
+    </data>
+</odoo>
