@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="djbc_nofas_laporan_pemasukan_gb"
+                name="Pemasukan"
+                parent="djbc_gb.djbc_laporan"
+                action="ab_nofas_masuk_gb.nofas_masuk_wizard_action"
+                sequence="10"/>
+    </data>
+</odoo>

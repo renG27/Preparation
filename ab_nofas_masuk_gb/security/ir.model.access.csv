@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_djbc_nofas_masuk_gb_user,access.djbc.nofas.masuk.gb.user,model_djbc_nofas_masuk_gb,djbc_gb.group_djbc_user,1,0,0,0
+access_djbc_nofas_masuk_gb_manager,access.djbc.nofas.masuk.v4.manager,model_djbc_nofas_masuk_gb,djbc_gb.group_djbc_manager,1,1,1,1
+access_djbc_nofas_masuk_wizard_gb,access.djbc.nofas.masuk.wizard.v4,model_djbc_nofas_masuk_wizard_gb,djbc_gb.group_djbc_manager,1,1,1,1
