@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+       id="nofas_keluar_xlsx"
+       model="djbc.nofas.keluar.gb.wizard"
+       string="Laporan Pengeluaran (XLSX)"
+       report_type="xlsx"
+       name="djbc_nofas_keluar_gb.report_xlsx"
+       file="Laporan Pengeluaran"
+    />
+</odoo>

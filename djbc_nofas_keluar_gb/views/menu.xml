@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<menuitem id="djbc_nofas_laporan_pengeluaran_gb" name="Pengeluaran" parent="djbc_gb.djbc_laporan" groups="djbc_gb.group_djbc_user"
+			  action="nofas_keluar_gb_wizard_action" sequence="30"/>
+	
+
+</odoo>

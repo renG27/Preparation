@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_djbc_nofas_keluar_gb_user,access.djbc.nofas.keluar.user,model_djbc_nofas_keluar_gb,djbc_gb.group_djbc_user,1,0,0,0
+access_djbc_nofas_keluar_gb_manager,access.djbc.nofas.keluar.manager,model_djbc_nofas_keluar_gb,djbc_gb.group_djbc_manager,1,1,1,1
+access_djbc_nofas_keluar_gb_wizard_user,access.djbc.nofas.keluar.gb.wizard.user,model_djbc_nofas_keluar_gb_wizard,djbc_gb.group_djbc_user,1,1,1,0
+access_djbc_nofas_keluar_gb_wizard_manager,access.djbc.nofas.keluar.gb.wizard.manager,model_djbc_nofas_keluar_gb_wizard,djbc_gb.group_djbc_manager,1,1,1,1
